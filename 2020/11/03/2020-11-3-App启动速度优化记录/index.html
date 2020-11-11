@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>App启动速度优化记录 | Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Tutorial">
+<meta property="og:type" content="article">
+<meta property="og:title" content="App启动速度优化记录">
+<meta property="og:url" content="http://example.com/2020/11/03/2020-11-3-App%E5%90%AF%E5%8A%A8%E9%80%9F%E5%BA%A6%E4%BC%98%E5%8C%96%E8%AE%B0%E5%BD%95/index.html">
+<meta property="og:site_name" content="Blog">
+<meta property="og:description" content="Tutorial">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/25163103-7770f44a24a0062e.jpg?imageMogr2/auto-orient/strip|imageView2/2/w/1200/format/webp">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/25163103-16634e238677ad21.jpg?imageMogr2/auto-orient/strip|imageView2/2/w/678/format/webp">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/25163103-b72886da0cda36c6.jpg?imageMogr2/auto-orient/strip|imageView2/2/w/677/format/webp">
+<meta property="article:published_time" content="2020-11-03T02:43:54.836Z">
+<meta property="article:modified_time" content="2020-11-11T04:10:03.892Z">
+<meta property="article:author" content="yyny1789">
+<meta property="article:tag" content="iOS">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://upload-images.jianshu.io/upload_images/25163103-7770f44a24a0062e.jpg?imageMogr2/auto-orient/strip|imageView2/2/w/1200/format/webp">
+  
+    <link rel="alternate" href="/atom.xml" title="Blog" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 5.2.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Blog</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-2020-11-3-App启动速度优化记录" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/11/03/2020-11-3-App%E5%90%AF%E5%8A%A8%E9%80%9F%E5%BA%A6%E4%BC%98%E5%8C%96%E8%AE%B0%E5%BD%95/" class="article-date">
+  <time datetime="2020-11-03T02:43:54.836Z" itemprop="datePublished">2020-11-03</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/iOS/">iOS</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      App启动速度优化记录
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="前因"><a href="#前因" class="headerlink" title="前因"></a>前因</h3><p>优化了 App 的启动速度，做个记录。</p>
+<h3 id="基础知识"><a href="#基础知识" class="headerlink" title="基础知识"></a>基础知识</h3><p>App 的启动总时间 T = T1 + T2 + T3</p>
+<p>T1：main函数之前</p>
+<p>T2：main函数之后到 didFinishLaunchingWithOptions 方法执行完毕</p>
+<p>T3：首页渲染</p>
+<h5 id="1）T1的主要工作有："><a href="#1）T1的主要工作有：" class="headerlink" title="1）T1的主要工作有："></a>1）T1的主要工作有：</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">exe() -&gt; 加载可执行文件 -&gt; 加载 dyld（the dynamic link editor）-&gt; dyld 加载其他动态库 -&gt; Rebase -&gt; Bind -&gt; Objc -&gt; initializer</span><br></pre></td></tr></table></figure>
+
+<p>操作系统首先为 App 进程分配一段内存空间，然后执行以下操作：</p>
+<ol>
+<li>把 App 对应的可执行文件加载到内存</li>
+<li>把 dyld 加载到内存</li>
+<li>dyld 进行动态链接</li>
+</ol>
+<p>dyld 在各阶段所做的事情：</p>
+<ol>
+<li><p>加载其他动态库</p>
+<p>dyld 从主执行文件的 header 获取到需要加载的所依赖动态库列表，然后它需要找到每个 dylib，而应用所依赖的 dylib 文件可能会再依赖其他 dylib，所以需要加载的动态库列表是一个递归依赖的集合。</p>
+</li>
+<li><p>Rebase 和 Bind </p>
+<p>Rebase 在 Image 内部调整指针的指向。在过去，会把动态库加载到指定地址，所有指针和数据对于代码都是对的。而现在地址空间是随机的，所有需要在原来的地址根据随意的偏移量做一下修正。</p>
+<p>Bind 是把指针正确地指向 Image 外部的内容。这些指向外部的指针被符号（symbol）名称绑定，dyld 需要去符号表里查找，找到 symbol 对应的实现。</p>
+</li>
+<li><p>Objc setup<br> 注册 Objc 类（class registration）<br> 把 category 的定义插入方法列表 （category registration）<br> 保证每一个 selector 唯一 （selector uniquing）</p>
+</li>
+<li><p>Initializers</p>
+<p> Objc 的 +load() 函数</p>
+<p> C++ 的构造函数、属性函数</p>
+<p> 非基础类型的 C++ 静态全局变量的创建（通常是类和结构体）</p>
+</li>
+</ol>
+<p>最后 dyld 会调用 main() 函数，main() 会调用 UIApplicationMain()，befor main() 的过程也就此完成。</p>
+<p>影响T1时间的因素：</p>
+<ol>
+<li>动态库加载越多，启动越慢</li>
+<li>Objc 类，方法越多，启动越慢</li>
+<li>Objc 的 +load 越多，启动越慢</li>
+<li>C 的 constructor 函数越多，启动越慢</li>
+<li>C++ 动态对象越多，启动越慢</li>
+</ol>
+<h5 id="2）T2的主要工作有："><a href="#2）T2的主要工作有：" class="headerlink" title="2）T2的主要工作有："></a>2）T2的主要工作有：</h5><p>各类 SDK 初始化，H5 资源包下载，数据库配置等操作</p>
+<p>影响T2时间的因素：</p>
+<p>一些可以延后初始化的 SDK / 下载的操作全都堆在 didFinishLaunchingWithOptions 方法里</p>
+<h5 id="3）T3的主要工作有："><a href="#3）T3的主要工作有：" class="headerlink" title="3）T3的主要工作有："></a>3）T3的主要工作有：</h5><p>请求网络数据，渲染首页 UI</p>
+<p>影响T3时间的因素：</p>
+<p>网络请求，页面渲染</p>
+<h3 id="具体实践"><a href="#具体实践" class="headerlink" title="具体实践"></a>具体实践</h3><h5 id="1）T1"><a href="#1）T1" class="headerlink" title="1）T1"></a>1）T1</h5><ol>
+<li><p>指定辅助 pod 库在 Debug 环境下运行</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">pod &#39;MLeaksFinder&#39;, :configurations &#x3D;&gt; [&#39;Debug&#39;]</span><br><span class="line">pod &#39;FLEX&#39;, :git &#x3D;&gt; &#39;https:&#x2F;&#x2F;github.com&#x2F;36Kr-Mobile&#x2F;FLEX.git&#39;, :commit &#x3D;&gt; &#39;49cb9e9e6ee29f48f4ebbc4810817ef4ad1e208a&#39;, :configurations &#x3D;&gt; [&#39;Debug&#39;]</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>去掉项目中过期类文件、方法、宏定义等</p>
+</li>
+</ol>
+<p>在 Edit Scheme —&gt; Run —&gt; Arguments —&gt; Environment Vaiables 里添加 <strong><em>DYLD_PRINT_STATISTICS</em></strong> 为1可以看到 main 函数之前的执行时间</p>
+<img src="https://upload-images.jianshu.io/upload_images/25163103-7770f44a24a0062e.jpg?imageMogr2/auto-orient/strip|imageView2/2/w/1200/format/webp" />
+
+
+
+<p>优化前：</p>
+<img src="https://upload-images.jianshu.io/upload_images/25163103-16634e238677ad21.jpg?imageMogr2/auto-orient/strip|imageView2/2/w/678/format/webp" />
+
+<p>优化后：</p>
+<img src="https://upload-images.jianshu.io/upload_images/25163103-b72886da0cda36c6.jpg?imageMogr2/auto-orient/strip|imageView2/2/w/677/format/webp" />
+
+<h5 id="2）T2"><a href="#2）T2" class="headerlink" title="2）T2"></a>2）T2</h5><p>把一些非必要的 SDK 放在首页渲染后再进行初始化</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// MARK: 延后注册的 SDK</span></span><br><span class="line">    <span class="keyword">fileprivate</span> <span class="function"><span class="keyword">func</span> <span class="title">delayRegisterSDK</span><span class="params">()</span></span> &#123;</span><br><span class="line">        delay(<span class="number">2.0</span>) &#123;</span><br><span class="line">            <span class="comment">// 初始化友盟</span></span><br><span class="line">            <span class="keyword">self</span>.setupUMeng()</span><br><span class="line">            </span><br><span class="line">            <span class="comment">// 支付模块</span></span><br><span class="line">            <span class="keyword">self</span>.setupIAP()</span><br><span class="line">            </span><br><span class="line">            <span class="comment">// 配置缓存数据库等</span></span><br><span class="line">            <span class="keyword">self</span>.configCache()</span><br><span class="line">            <span class="keyword">self</span>.updateRealmVersion()</span><br><span class="line">            </span><br><span class="line">            <span class="comment">// 系统配置的东西</span></span><br><span class="line">            <span class="keyword">self</span>.fetchServiceInfo()</span><br><span class="line">            </span><br><span class="line">            ...</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h5 id="3）T3"><a href="#3）T3" class="headerlink" title="3）T3"></a>3）T3</h5><p>把网络请求提前，放在开屏广告页请求</p>
+<h3 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h3><p><a target="_blank" rel="noopener" href="http://www.iqiyi.com/v_yndjwu5lb8.html">优化前视频</a></p>
+<p><a target="_blank" rel="noopener" href="http://www.iqiyi.com/v_wkpxdzs7v4.html">优化后视频</a></p>
+<h3 id="推荐资料"><a href="#推荐资料" class="headerlink" title="推荐资料"></a>推荐资料</h3><p><a target="_blank" rel="noopener" href="https://tech.meituan.com/2018/12/06/waimai-ios-optimizing-startup.html">美团外卖iOS App冷启动治理</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/7096478ccbe7">今日头条iOS客户端启动速度优化</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2020/11/03/2020-11-3-App%E5%90%AF%E5%8A%A8%E9%80%9F%E5%BA%A6%E4%BC%98%E5%8C%96%E8%AE%B0%E5%BD%95/" data-id="ckhd63jot000rm3fy89f96ecn" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/iOS/" rel="tag">iOS</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2020/11/05/2020-11-11-Kingfisher%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Kingfisher源码分析
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2018/04/12/2017-11-10-App%20%E9%80%82%E9%85%8D%20iOS11%20%E5%92%8C%20iPhone%20X/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">App 适配 iOS11 和 iPhone X</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/iOS/">iOS</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/life/">life</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/iOS/" rel="tag">iOS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%94%9F%E6%B4%BB/" rel="tag">生活</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/iOS/" style="font-size: 20px;">iOS</a> <a href="/tags/%E7%94%9F%E6%B4%BB/" style="font-size: 10px;">生活</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/11/">November 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">April 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/">September 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">May 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/09/">September 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/11/">November 2014</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2020/11/05/2020-11-11-Kingfisher%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90/">Kingfisher源码分析</a>
+          </li>
+        
+          <li>
+            <a href="/2020/11/03/2020-11-3-App%E5%90%AF%E5%8A%A8%E9%80%9F%E5%BA%A6%E4%BC%98%E5%8C%96%E8%AE%B0%E5%BD%95/">App启动速度优化记录</a>
+          </li>
+        
+          <li>
+            <a href="/2018/04/12/2017-11-10-App%20%E9%80%82%E9%85%8D%20iOS11%20%E5%92%8C%20iPhone%20X/">App 适配 iOS11 和 iPhone X</a>
+          </li>
+        
+          <li>
+            <a href="/2017/09/27/2017-5-4-%E5%8D%87%E7%BA%A7%20Swift%203/">升级 Swift 3</a>
+          </li>
+        
+          <li>
+            <a href="/2017/09/27/2017-9-27-%E4%BF%AE%E5%A4%8D%20iOS%2010%20nano_free%20Crash/">修复 iOS 10 nano_free Crash</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2020 yyny1789<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>
