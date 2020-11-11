@@ -1,253 +1,37 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
-  
+{% extends '_layout.swig' %}
+{% import '_macro/post.swig' as post_template %}
+{% import '_macro/sidebar.swig' as sidebar_template %}
 
-  
-  <title>寿司之神 | Blog</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="life">
-<meta property="og:type" content="article">
-<meta property="og:title" content="寿司之神">
-<meta property="og:url" content="http://example.com/2017/05/03/2014-12-10-%E5%AF%BF%E5%8F%B8%E4%B9%8B%E7%A5%9E/index.html">
-<meta property="og:site_name" content="Blog">
-<meta property="og:description" content="life">
-<meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2017-05-03T08:59:55.000Z">
-<meta property="article:modified_time" content="2018-06-05T12:08:43.481Z">
-<meta property="article:author" content="yyny1789">
-<meta property="article:tag" content="生活">
-<meta name="twitter:card" content="summary">
-  
-    <link rel="alternate" href="/atom.xml" title="Blog" type="application/atom+xml">
-  
-  
-    <link rel="icon" href="/favicon.png">
-  
-  
-    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
-  
-  
-<link rel="stylesheet" href="/css/style.css">
 
-<meta name="generator" content="Hexo 5.2.0"></head>
+{% block title %}{{ page.title }} | {{ config.title }}{% endblock %}
 
-<body>
-  <div id="container">
-    <div id="wrap">
-      <header id="header">
-  <div id="banner"></div>
-  <div id="header-outer" class="outer">
-    <div id="header-title" class="inner">
-      <h1 id="logo-wrap">
-        <a href="/" id="logo">Blog</a>
-      </h1>
-      
-    </div>
-    <div id="header-inner" class="inner">
-      <nav id="main-nav">
-        <a id="main-nav-toggle" class="nav-icon"></a>
-        
-          <a class="main-nav-link" href="/">Home</a>
-        
-          <a class="main-nav-link" href="/archives">Archives</a>
-        
-      </nav>
-      <nav id="sub-nav">
-        
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
-        
-        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
-      </nav>
-      <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
-      </div>
-    </div>
-  </div>
-</header>
-      <div class="outer">
-        <section id="main"><article id="post-2014-12-10-寿司之神" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2017/05/03/2014-12-10-%E5%AF%BF%E5%8F%B8%E4%B9%8B%E7%A5%9E/" class="article-date">
-  <time datetime="2017-05-03T08:59:55.000Z" itemprop="datePublished">2017-05-03</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/life/">life</a>
-  </div>
+{% block page_class %}page-post-detail{% endblock %}
 
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="article-title" itemprop="name">
-      寿司之神
-    </h1>
-  
 
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>《寿司之神》是一部值得大家都看的纪录片。</p>
-<h3 id="语录"><a href="#语录" class="headerlink" title="语录"></a>语录</h3><p>1.小野二郎：一旦你决定好职业，你必须全心投入工作之中，你必须爱自己的工作，千万不要有怨言，你必须穷尽一生磨练技能，这就是成功的秘诀，也是让人家敬重的关键。</p>
-<p>2.小野二郎：我一直重复同样的事情以求精进，我总是向往能够有所进步，我会继续向上，努力达到巅峰，但没有人知道巅峰在哪里。</p>
-<p>3.小野二郎：即使到我这年纪，工作了数十年，我仍然不认为自己已臻至善，但我每天依然感到欣喜，我就是爱捏寿司，这就是职人的精神。</p>
-<p>4.鱼店老板：我到了这个年纪还在学新手艺，你一旦认为自己无所不知，就会发现其实只是在欺骗自己，然后会变得很沮丧。</p>
-<p>5.小野二郎：永远听命行事不代表人生会成功。</p>
-<p>6.小野祯一：要一直向前看，超越自己，始终努力，精益求精。这就是他教给我的。</p>
+{% block content %}
 
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2017/05/03/2014-12-10-%E5%AF%BF%E5%8F%B8%E4%B9%8B%E7%A5%9E/" data-id="ckhd6hr080006tmfybg4a5oi3" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E7%94%9F%E6%B4%BB/" rel="tag">生活</a></li></ul>
+  <div id="posts" class="posts-expand">
+    {{ post_template.render(page) }}
 
-    </footer>
-  </div>
-  
-    
-<nav id="article-nav">
-  
-    <a href="/2017/05/03/2015-10-6-the-meaning-of-traveling/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          旅行的意义
-        
-      </div>
-    </a>
-  
-  
-    <a href="/2017/05/03/2015-7-10-%E6%8F%90%E9%AB%98iOS%E5%BC%80%E5%8F%91%E6%95%88%E7%8E%87%E7%9A%84%E6%96%B9%E6%B3%95%E5%92%8C%E5%B7%A5%E5%85%B7/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">提高iOS开发效率的方法和工具</div>
-    </a>
-  
-</nav>
-
-  
-</article>
-
-</section>
-        
-          <aside id="sidebar">
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Categories</h3>
-    <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/iOS/">iOS</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/life/">life</a></li></ul>
+    <div class="post-spread">
+      {% if theme.jiathis %}
+        {% include '_partials/share/jiathis.swig' %}
+      {% elseif theme.baidushare %}
+        {% include '_partials/share/baidushare.swig' %}
+      {% elseif theme.add_this_id %}
+        {% include '_partials/share/add-this.swig' %}
+      {% elseif theme.duoshuo_shortname and theme.duoshuo_share %}
+        {% include '_partials/share/duoshuo_share.swig' %}
+      {% endif %}
     </div>
   </div>
 
+{% endblock %}
 
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Tags</h3>
-    <div class="widget">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/iOS/" rel="tag">iOS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%94%9F%E6%B4%BB/" rel="tag">生活</a></li></ul>
-    </div>
-  </div>
+{% block sidebar %}
+  {{ sidebar_template.render(true) }}
+{% endblock %}
 
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Tag Cloud</h3>
-    <div class="widget tagcloud">
-      <a href="/tags/iOS/" style="font-size: 20px;">iOS</a> <a href="/tags/%E7%94%9F%E6%B4%BB/" style="font-size: 10px;">生活</a>
-    </div>
-  </div>
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Archives</h3>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/11/">November 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">April 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/">September 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">May 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/09/">September 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/11/">November 2014</a></li></ul>
-    </div>
-  </div>
-
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
-    <div class="widget">
-      <ul>
-        
-          <li>
-            <a href="/2020/11/05/2020-11-11-Kingfisher%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90/">Kingfisher源码分析</a>
-          </li>
-        
-          <li>
-            <a href="/2020/11/03/2020-11-3-App%E5%90%AF%E5%8A%A8%E9%80%9F%E5%BA%A6%E4%BC%98%E5%8C%96%E8%AE%B0%E5%BD%95/">App启动速度优化记录</a>
-          </li>
-        
-          <li>
-            <a href="/2018/04/12/2017-11-10-App%20%E9%80%82%E9%85%8D%20iOS11%20%E5%92%8C%20iPhone%20X/">App 适配 iOS11 和 iPhone X</a>
-          </li>
-        
-          <li>
-            <a href="/2017/09/27/2017-5-4-%E5%8D%87%E7%BA%A7%20Swift%203/">升级 Swift 3</a>
-          </li>
-        
-          <li>
-            <a href="/2017/09/27/2017-9-27-%E4%BF%AE%E5%A4%8D%20iOS%2010%20nano_free%20Crash/">修复 iOS 10 nano_free Crash</a>
-          </li>
-        
-      </ul>
-    </div>
-  </div>
-
-  
-</aside>
-        
-      </div>
-      <footer id="footer">
-  
-  <div class="outer">
-    <div id="footer-info" class="inner">
-      &copy; 2020 yyny1789<br>
-      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
-    </div>
-  </div>
-</footer>
-    </div>
-    <nav id="mobile-nav">
-  
-    <a href="/" class="mobile-nav-link">Home</a>
-  
-    <a href="/archives" class="mobile-nav-link">Archives</a>
-  
-</nav>
-    
-
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-
-
-  
-<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
-
-  
-<script src="/fancybox/jquery.fancybox.pack.js"></script>
-
-
-
-
-<script src="/js/script.js"></script>
-
-
-
-
-  </div>
-</body>
-</html>
+{% block script_extra %}
+  {% include '_scripts/pages/post-details.swig' %}
+{% endblock %}
