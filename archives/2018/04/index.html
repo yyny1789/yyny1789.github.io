@@ -24,23 +24,16 @@
     var CONFIG = {"hostname":"example.com","root":"/","images":"/images","scheme":"Muse","version":"8.0.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}};
   </script>
 
-  <meta name="description" content="Tutorial">
-<meta property="og:type" content="article">
-<meta property="og:title" content="修复 iOS 10 nano_free Crash">
-<meta property="og:url" content="http://example.com/2017/09/27/2017-9-27-%E4%BF%AE%E5%A4%8D%20iOS%2010%20nano_free%20Crash/index.html">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="Blog">
+<meta property="og:url" content="http://example.com/archives/2018/04/index.html">
 <meta property="og:site_name" content="Blog">
-<meta property="og:description" content="Tutorial">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="http://yyny.me/images/iOS10_nano_crash/bugly.png">
-<meta property="article:published_time" content="2017-09-27T09:14:43.000Z">
-<meta property="article:modified_time" content="2017-09-27T14:05:00.000Z">
 <meta property="article:author" content="yyny1789">
-<meta property="article:tag" content="iOS">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://yyny.me/images/iOS10_nano_crash/bugly.png">
 
 
-<link rel="canonical" href="http://example.com/2017/09/27/2017-9-27-%E4%BF%AE%E5%A4%8D%20iOS%2010%20nano_free%20Crash/">
+<link rel="canonical" href="http://example.com/archives/2018/04/">
 
 
 <script class="page-configurations">
@@ -48,12 +41,12 @@
   CONFIG.page = {
     sidebar: "",
     isHome : false,
-    isPost : true,
+    isPost : false,
     lang   : 'en'
   };
 </script>
 
-  <title>修复 iOS 10 nano_free Crash | Blog</title>
+  <title>Archive | Blog</title>
   
 
 
@@ -141,7 +134,7 @@
 
   <aside class="sidebar">
 
-    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+    <div class="sidebar-inner sidebar-overview-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
           Table of Contents
@@ -154,7 +147,6 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <section class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BB%8B%E7%BB%8D"><span class="nav-number">1.</span> <span class="nav-text">介绍</span></a></li></ol></div>
         </section>
         <!--/noindex-->
 
@@ -204,103 +196,53 @@
 </noscript>
 
 
-    <div class="main-inner post posts-expand">
+    <div class="main-inner archive posts-collapse">
       
 
       
 
   
-
-
-<div class="post-block">
   
   
+  <div class="post-block">
+    <div class="post-content">
+      <div class="collection-title">
+        <span class="collection-header">Um..! 15 posts in total. Keep on posting.</span>
+      </div>
 
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2017/09/27/2017-9-27-%E4%BF%AE%E5%A4%8D%20iOS%2010%20nano_free%20Crash/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="yyny1789">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Blog">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          修复 iOS 10 nano_free Crash
-        </h1>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
       
-
-      <time title="Created: 2017-09-27 17:14:43 / Modified: 22:05:00" itemprop="dateCreated datePublished" datetime="2017-09-27T17:14:43+08:00">2017-09-27</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/iOS/" itemprop="url" rel="index"><span itemprop="name">iOS</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-            <div class="post-description">Tutorial</div>
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-        <h3 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h3><p>偶然在 Bugly 上发现 iOS 10 nano_free Crash，堆栈信息大概是这样的：</p>
-<p><img src="http://yyny.me/images/iOS10_nano_crash/bugly.png" alt="图片"></p>
-<p>关于这个 Crash，可以看下这篇 <a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s/hnwj24xqrtOhcjEt_TaQ9w">文章</a>，下面只说解决的方案，其实和腾讯的第五种方案类似，<strong>在启动时，把产生crash的内存部分占住</strong>。</p>
-<p>具体使用方法参考 <a target="_blank" rel="noopener" href="https://github.com/yyny1789/Fix_iOS10_Nano_Crash">Fix_iOS10_Nano_Crash</a> README。</p>
-
+    <div class="collection-year">
+      <span class="collection-header">2018</span>
     </div>
 
-    
-    
-    
+  <article itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+      <div class="post-meta-container">
+        <time itemprop="dateCreated"
+              datetime="2018-04-10T00:11:43+08:00"
+              content="2018-04-10">
+          04-10
+        </time>
+      </div>
 
-    <footer class="post-footer">
-          <div class="post-tags">
-              <a href="/tags/iOS/" rel="tag"># iOS</a>
-          </div>
+      <div class="post-title">
+          <a class="post-title-link" href="/2018/04/10/2018-4-9-iOS%20%E6%96%B0%E4%BA%BA%E9%A1%BB%E7%9F%A5/" itemprop="url">
+            <span itemprop="name">iOS 新人须知</span>
+          </a>
+      </div>
 
-        
-
-          <div class="post-nav">
-            <div class="post-nav-item">
-                <a href="/2017/05/04/2017-5-4-%E5%8D%87%E7%BA%A7%20Swift%203/" rel="prev" title="升级 Swift 3">
-                  <i class="fa fa-chevron-left"></i> 升级 Swift 3
-                </a>
-            </div>
-            <div class="post-nav-item">
-                <a href="/2017/11/10/2017-11-10-App%20%E9%80%82%E9%85%8D%20iOS11%20%E5%92%8C%20iPhone%20X/" rel="next" title="App 适配 iOS11 和 iPhone X">
-                  App 适配 iOS11 和 iPhone X <i class="fa fa-chevron-right"></i>
-                </a>
-            </div>
-          </div>
-    </footer>
+      
+    </header>
   </article>
-</div>
 
 
+    </div>
+  </div>
+  
+  
+  
 
+  
 
 
 
