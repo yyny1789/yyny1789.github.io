@@ -1,12 +1,29 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.2.0">
 
-  
-  <title>Blog</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.1/css/all.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css">
+
+<script class="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"example.com","root":"/","images":"/images","scheme":"Muse","version":"8.0.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}};
+  </script>
+
   <meta property="og:type" content="website">
 <meta property="og:title" content="Blog">
 <meta property="og:url" content="http://example.com/page/2/index.html">
@@ -14,572 +31,719 @@
 <meta property="og:locale" content="en_US">
 <meta property="article:author" content="yyny1789">
 <meta name="twitter:card" content="summary">
-  
-    <link rel="alternate" href="/atom.xml" title="Blog" type="application/atom+xml">
-  
-  
-    <link rel="icon" href="/favicon.png">
-  
-  
-    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
-  
-  
-<link rel="stylesheet" href="/css/style.css">
 
-<meta name="generator" content="Hexo 5.2.0"></head>
 
-<body>
-  <div id="container">
-    <div id="wrap">
-      <header id="header">
-  <div id="banner"></div>
-  <div id="header-outer" class="outer">
-    <div id="header-title" class="inner">
-      <h1 id="logo-wrap">
-        <a href="/" id="logo">Blog</a>
-      </h1>
-      
+<link rel="canonical" href="http://example.com/page/2/">
+
+
+<script class="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : true,
+    isPost : false,
+    lang   : 'en'
+  };
+</script>
+
+  <title>Blog</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  body { margin-top: 2rem; }
+
+  .use-motion .menu-item,
+  .use-motion .sidebar,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header {
+    visibility: visible;
+  }
+
+  .use-motion .header,
+  .use-motion .site-brand-container .toggle,
+  .use-motion .footer { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle,
+  .use-motion .custom-logo-image {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line {
+    transform: scaleX(1);
+  }
+
+  .search-pop-overlay, .sidebar-nav { display: none; }
+  .sidebar-panel { display: block; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
     </div>
-    <div id="header-inner" class="inner">
-      <nav id="main-nav">
-        <a id="main-nav-toggle" class="nav-icon"></a>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">Blog</h1>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
         
-          <a class="main-nav-link" href="/">Home</a>
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-overview-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <section class="post-toc-wrap sidebar-panel">
+        </section>
+        <!--/noindex-->
+
+        <section class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">yyny1789</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
         
-          <a class="main-nav-link" href="/archives">Archives</a>
-        
-          <a class="main-nav-link" href="/tags">tags</a>
-        
-      </nav>
-      <nav id="sub-nav">
-        
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
-        
-        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
-      </nav>
-      <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+          <span class="site-state-item-count">15</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-name">categories</span>
+      </div>
+      <div class="site-state-item site-state-tags">
+        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-name">tags</span>
+      </div>
+  </nav>
+</div>
+
+
+
+        </section>
       </div>
     </div>
-  </div>
-</header>
-      <div class="outer">
-        <section id="main">
-  
-    <article id="post-2015-7-10-提高iOS开发效率的方法和工具" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2015/07/10/2015-7-10-%E6%8F%90%E9%AB%98iOS%E5%BC%80%E5%8F%91%E6%95%88%E7%8E%87%E7%9A%84%E6%96%B9%E6%B3%95%E5%92%8C%E5%B7%A5%E5%85%B7/" class="article-date">
-  <time datetime="2015-07-10T14:05:00.000Z" itemprop="datePublished">2015-07-10</time>
-</a>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
     
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/iOS/">iOS</a>
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
   </div>
 
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/07/10/2015-7-10-%E6%8F%90%E9%AB%98iOS%E5%BC%80%E5%8F%91%E6%95%88%E7%8E%87%E7%9A%84%E6%96%B9%E6%B3%95%E5%92%8C%E5%B7%A5%E5%85%B7/">提高iOS开发效率的方法和工具</a>
-    </h1>
-  
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
 
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
+
+    <div class="main-inner index posts-expand">
       
-        <h3 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h3><p>这篇文章主要是介绍一下我在iOS开发中使用到的一些可以提升开发效率的方法和工具。</p>
-<h3 id="IDE"><a href="#IDE" class="headerlink" title="IDE"></a>IDE</h3><p>首先要说的肯定是IDE了，说到IDE，Xcode不能跑，当然你也可能同时在使用AppCode等其他的IDE，在这里我主要介绍Xcode中提升开发效率的方法。</p>
-<h4 id="善用快捷键"><a href="#善用快捷键" class="headerlink" title="善用快捷键"></a>善用快捷键</h4><p>快捷键是开发中必不可少的，当你善于使用快捷键的时候，十指在键盘上飞舞，那画面太美，我不敢想象<img src="https://i.loli.net/2020/11/12/ZtfM8wm9uSTqs4j.png" alt="wulian.png">。</p>
-<ul>
-<li><a target="_blank" rel="noopener" href="http://www.cocoachina.com/ios/20141224/10752.html"><strong><em>常用快捷键操作</em></strong></a></li>
-</ul>
-<h4 id="常用代码片段"><a href="#常用代码片段" class="headerlink" title="常用代码片段"></a>常用代码片段</h4><p>开发中有一些常用的代码，可以放到代码片段中，然后下次你就可以使用快捷方法来使用这些代码了，给大家看下我的Xcode中部分代码片段:</p>
-<p><img src="https://i.loli.net/2020/11/12/qTKCyfAYV4pPO3e.png" alt="daimapianduan.png"></p>
-<ul>
-<li><a target="_blank" rel="noopener" href="http://www.2cto.com/kf/201409/336245.html"><strong><em>偷懒小技巧</em></strong></a></li>
-</ul>
-<h4 id="Xcode插件"><a href="#Xcode插件" class="headerlink" title="Xcode插件"></a>Xcode插件</h4><p>我想插件是Xcode必不可少的把</p>
-<ul>
-<li><a target="_blank" rel="noopener" href="http://www.cocoachina.com/industry/20130918/7022.html"><strong><em>那些不能错过的Xcode插件</em></strong></a></li>
-</ul>
-<p>除此之外，我自己还经常用到的插件有：</p>
-<p>1.<a target="_blank" rel="noopener" href="https://github.com/markohlebar/Peckham"><strong><em>快速Add #import</em></strong></a></p>
-<p>2.<a target="_blank" rel="noopener" href="https://github.com/trawor/XToDo"><strong><em>查看项目的’TODO’,’FIXME’等</em></strong></a></p>
-<p>在此强烈推荐给大家。</p>
-<p>你可能想，如果没有我要用的插件怎么办？少年，这个时候就要自己动手丰衣足食了,我想你可以看看这个<a target="_blank" rel="noopener" href="http://zixun.github.io/blog/2015/05/04/xcode6cha-jian-kai-fa-ru-men/"><strong><em>Xcode6插件开发入门</em></strong></a>。</p>
-<h4 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h4><p>注释的作用就不多说了，而且现在公司都要求代码必须有注释。</p>
-<h5 id="示例1"><a href="#示例1" class="headerlink" title="示例1"></a>示例1</h5><p>之前一直在用 喵神<a target="_blank" rel="noopener" href="http://weibo.com/onevcat?from=myfollow_all"><strong><em>onevcat</em></strong></a> 开源的 <a target="_blank" rel="noopener" href="https://github.com/onevcat/VVDocumenter-Xcode"><strong><em>VVDocumenter-Xcode</em></strong></a>.</p>
-<p>但是后来觉得这种注释会有这样一个问题：一个注释多三行</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;**</span><br><span class="line"> *  顶部公告btn</span><br><span class="line"> *&#x2F;</span><br><span class="line">@property (nonatomic, strong) UIButton *topAnnouncementBtn;</span><br></pre></td></tr></table></figure>
 
-<p>接口用这种方法会简单明了，但是属性的话，总感觉.h文件好多东西（其实没几个属性啊😱😱😱）</p>
-<h5 id="示例2"><a href="#示例2" class="headerlink" title="示例2"></a>示例2</h5><p>后来换成这样：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;**顶部公告btn *&#x2F;</span><br><span class="line">@property (nonatomic, strong) UIButton *topAnnouncementBtn;</span><br></pre></td></tr></table></figure>
+      
+    
 
-<p>还是多一行，再后来换成这样：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">@property (nonatomic, strong) UIButton *topAnnouncementBtn; &#x2F;&#x2F; 顶部公告btn </span><br></pre></td></tr></table></figure>
 
-<p>但是这种方式，在你使用这个属性的时候，是不会有注释提示的。没有就没有把，遇见不明大意的属性，到时候再跳到.h 文件 看一眼。(“呸，你怎么这么容易就妥协了！！！”，我当时应该在心里暗暗骂自己的😭😭😭）</p>
-<h5 id="示例3"><a href="#示例3" class="headerlink" title="示例3"></a>示例3</h5><p>之后某天在微博上看到  <a target="_blank" rel="noopener" href="http://weibo.com/JoanfenZhang"><strong><em>芳仔小脚印</em></strong></a>  的博客 <a target="_blank" rel="noopener" href="http://my.oschina.net/joanfen/blog/415058"><strong><em>我是如何收拾代码的</em></strong></a>  中介绍她是这样注释属性的：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">UIButton *btnSend;&#x2F;**&lt; 发送按钮 *&#x2F;</span><br></pre></td></tr></table></figure>
+<div class="post-block">
+  
+  
 
-<p><img src="https://i.loli.net/2020/11/12/UE5ZzjeTIFpNg2o.png" alt="zhushi2.png"></p>
-<p>试用了一下，很方便。之后一直用这种方法做属性注释，在这里分享给大家。</p>
-<p>感谢 <a target="_blank" rel="noopener" href="http://weibo.com/JoanfenZhang"><strong><em>芳仔小脚印</em></strong></a> 的分享😘</p>
-<p>后面网友 <a target="_blank" rel="noopener" href="http://www.cocoachina.com/bbs/u.php?uid=221894"><strong><em>q582975598</em></strong></a> 提醒 </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">UIButton *btnSend;&#x2F;**&lt; 发送按钮 *&#x2F; </span><br></pre></td></tr></table></figure>
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2015/07/10/2015-7-10-%E6%8F%90%E9%AB%98iOS%E5%BC%80%E5%8F%91%E6%95%88%E7%8E%87%E7%9A%84%E6%96%B9%E6%B3%95%E5%92%8C%E5%B7%A5%E5%85%B7/">
 
-<p>等于</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">UIButton *btnSend;&#x2F;&#x2F;&#x2F;&lt;发送按钮</span><br></pre></td></tr></table></figure>
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="yyny1789">
+      <meta itemprop="description" content="">
+    </span>
 
-<p>使用了下，真的是这样哦😘😘</p>
-<h5 id="示例4"><a href="#示例4" class="headerlink" title="示例4"></a>示例4</h5><p>某天在看**<em>KeepLayout**</em>的.h文件时，发现它是这么写注释的</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;&#x2F; Width of the receiver.</span><br><span class="line"></span><br><span class="line">@property (nonatomic, readonly) KeepAttribute *keepWidth;</span><br></pre></td></tr></table></figure>
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2015/07/10/2015-7-10-%E6%8F%90%E9%AB%98iOS%E5%BC%80%E5%8F%91%E6%95%88%E7%8E%87%E7%9A%84%E6%96%B9%E6%B3%95%E5%92%8C%E5%B7%A5%E5%85%B7/" class="post-title-link" itemprop="url">提高iOS开发效率的方法和工具</a>
+        </h2>
 
-<p>这样写也是有注释提示功能的，感觉更方便呢。</p>
-<h3 id="网络数据相关"><a href="#网络数据相关" class="headerlink" title="网络数据相关"></a>网络数据相关</h3><h4 id="调试接口"><a href="#调试接口" class="headerlink" title="调试接口"></a>调试接口</h4><p>少年，你还在写方法调试接口吗？如果是，那你一定需要下面这2个了哈:</p>
-<p><img src="https://i.loli.net/2020/11/12/7KrzvfPqcmOY8ub.jpg" alt="tiaoshijiekou2.png"></p>
-<p><a href="chrome-extension://aejoelaoggembcahagimdiliamlcdmfm/dhc.html"><strong><em>DHC</em></strong></a> 在线调试接口，支持HTTP和HTTPS呦。</p>
-<p><img src="https://i.loli.net/2020/11/12/HPLC4ZrjADwxXfc.jpg" alt="dhc.png"></p>
-<p><a target="_blank" rel="noopener" href="http://chromecj.com/web-development/2014-09/60.html"><strong><em>Postman</em></strong></a> 一款功能强大的网页调试与发送网页HTTP请求的Chrome插件。(感谢<a target="_blank" rel="noopener" href="http://weibo.com/u/1438670852?from=feed&loc=nickname"><strong><em>叶孤城___</em></strong></a>提醒😘)</p>
-<h4 id="JSON数据编辑"><a href="#JSON数据编辑" class="headerlink" title="JSON数据编辑"></a>JSON数据编辑</h4><p>废话不多说，直接上图：</p>
-<p><img src="https://i.loli.net/2020/11/12/DgLPYdsxZeBz2va.png" alt="jsonedit.png"></p>
-<ul>
-<li><a href="chrome-extension://lhkmoheomjbkfloacpgllgjcamhihfaj/index.html"><strong><em>JSON Editor Online</em></strong></a></li>
-</ul>
-<p><img src="https://i.loli.net/2020/11/12/2y56SEvhzpwlxjC.png" alt="jsonedit2.png"></p>
-<ul>
-<li><a target="_blank" rel="noopener" href="http://www.runoob.com/tool/json/index.html">JSON格式化工具</a>  (感谢<a target="_blank" rel="noopener" href="http://weibo.com/luohanchenyilong?from=feed&loc=nickname"><strong><em>iOS程序犭袁</em></strong></a> 提供😘)</li>
-</ul>
-<h3 id="UI相关"><a href="#UI相关" class="headerlink" title="UI相关"></a>UI相关</h3><h4 id="距离"><a href="#距离" class="headerlink" title="距离"></a>距离</h4><p>不行！说的是20px！差1px，2px，都不算20px！😂</p>
-<p>遇到有像素眼的设计师，想哭的心情总是有。但是他们可能有时候会忘记标X、Y，或者就是宽高，<s>下面是我司UI给的一张图</s>, 用下图来举例不合适，但是大体意思是说可能会忘记标注😰</p>
-<p><img src="https://i.loli.net/2020/11/12/rvGti9zARJLpsjg.png" alt="xiangqing.png"></p>
-<p>魂淡，说好的X，Y呢？😡</p>
-<p>然后我最开始是这样做的</p>
-<p><img src="https://i.loli.net/2020/11/12/e3LozYuPynijZsF.jpg" alt="ui.png"></p>
-<p>😂可是总会有辣么一点误差，而且费眼。。。后来我偶然听一个产品朋友说他们在用<a target="_blank" rel="noopener" href="http://www.getmarkman.com/"><strong><em>马克鳗</em></strong></a> 标图，它有免费和收费2个版本，免费版本可以使用基本功能，感觉还不错。</p>
-<p>今天喵神<a target="_blank" rel="noopener" href="http://weibo.com/onevcat?from=myfollow_all"><strong><em>onevcat</em></strong></a>在微博发了一个测量的工具：<a target="_blank" rel="noopener" href="http://www.ricciadams.com/projects/pixel-winch"><strong><em>Pixel Winch</em></strong></a> ,试了一下，比*<strong>马克鳗***好使。另外就是可以设置一下 *</strong>Show screenshots*** 的快捷键，那感觉飞起来一般😃</p>
-<p><img src="https://i.loli.net/2020/11/12/tv1JFnlicDwIUNV.jpg" alt="shezhikuaijiejian.jpg"></p>
-<h4 id="图片压缩"><a href="#图片压缩" class="headerlink" title="图片压缩"></a>图片压缩</h4><p>我们UI就不太注重图片的大小，尼玛，有一次给的图片有4M多，害我自己还得压缩一遍😭</p>
-<ul>
-<li><p><a target="_blank" rel="noopener" href="https://tinypng.com/"><strong><em>tinypng</em></strong></a>，保质压缩，我感觉还不错，推荐给我们UI和后台，他们用过之后都说好👍</p>
-</li>
-<li><p><a target="_blank" rel="noopener" href="https://github.com/ylovern/GGTinypng"><strong><em>tinypng批量压缩图片脚本</em></strong></a> 配套使用更佳😃。(感谢<a target="_blank" rel="noopener" href="http://weibo.com/u/2972590612"><strong><em>newbee_nAn</em></strong></a> 提供😘)</p>
-</li>
-</ul>
-<h4 id="AppIcon"><a href="#AppIcon" class="headerlink" title="AppIcon"></a>AppIcon</h4><p>AppIcon只需要UI提供一张1024*1024的图就可以了，具体的icon可以用<a target="_blank" rel="noopener" href="https://itunes.apple.com/tw/app/prepo/id476533227?mt=12"><strong><em>Prepo</em></strong></a>生成</p>
-<p><img src="https://i.loli.net/2020/11/12/nuY9UkTepsXzyiW.jpg" alt="Prepo.jpeg"></p>
-<h3 id="两地办公"><a href="#两地办公" class="headerlink" title="两地办公"></a>两地办公</h3><p>假设这么一种情况：公司用的是SVN，公司一台公司电脑，家里一台自己电脑，有时候可能想回来后接着敲代码，怎么办？</p>
-<p>再假设这么一种情况：公司用的是SVN，产品想实现一种效果，但是你又不确定能不能写出来，所以你可能会纠结要不要在公司项目上改动，怎么办？</p>
-<p>如果有上述两种烦恼，那么Github 和 Bitbucket 是您的首选，具体选哪个，这里有一篇对比文章:<a target="_blank" rel="noopener" href="http://www.oschina.net/translate/bitbucket-vs-github-its-more-than-just-features"><strong><em>GitHub vs. Bitbucket 不只是功能不同</em></strong></a>.</p>
-<h3 id="Github"><a href="#Github" class="headerlink" title="Github"></a>Github</h3><p>Github上好的开源项目太多，一个一个的star，太慢了，怎么破？😞</p>
-<blockquote>
-<p>language:Objective-C stars:&gt;900</p>
-</blockquote>
-<p><img src="https://i.loli.net/2020/11/12/GhP2sXWVJefKEx9.png" alt="githubsearch.png"></p>
-<p>这个其实就是Github的**<em>Advanced search**</em>功能：</p>
-<p><img src="https://i.loli.net/2020/11/12/JKY8S14wCcdOejx.jpg" alt="githubAdvancedSearch.png"></p>
-<p><img src="https://i.loli.net/2020/11/12/lZT1qVhbs68Lz4F.png" alt="githubAdvancedSearch2.png"></p>
-<p>小伙伴们切记啊，star后并不代表你就掌握了，只有真正深入了解后才是自己的。</p>
-<p>另外<strong>Github Advanced Search</strong> 可以用来寻找小伙伴哦——<br><a target="_blank" rel="noopener" href="http://wangchao.de/github-advanced-search%E7%8C%8E%E5%A4%B4%E5%A4%A7%E6%B3%95/"><strong><em>Github Advanced Search猎头大法</em></strong></a>.😁</p>
-<h3 id="项目估算时间"><a href="#项目估算时间" class="headerlink" title="项目估算时间"></a>项目估算时间</h3><p>项目估算时间是作为一个开发必须get的技能！！</p>
-<p>最开始我是用Excel来记录版本功能的预算时间，一直也没觉得有什么不妥，后来看到一个功力深厚程序员是**<em>“MINDMAO”**</em>用记录的，然后就学来一招。</p>
-<p>放一张以前公司App的版本功能图：</p>
-<p><img src="https://i.loli.net/2020/11/12/BSClXnRFxTtzOPK.png" alt="MINDMAP.png"></p>
-<p>总之我是感觉比Excel更加清晰了。</p>
-<p>那么这个东西在哪里下呢，在 <a target="_blank" rel="noopener" href="http://soft.macx.cn/"><strong><em>http://soft.macx.cn/</em></strong></a> 这个网站 搜 <strong><em>ConceptDraw</em></strong>，你就可以找到它了。对，就酱紫~</p>
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
 
+      <time title="Created: 2015-07-10 22:05:00" itemprop="dateCreated datePublished" datetime="2015-07-10T22:05:00+08:00">2015-07-10</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">Edited on</span>
+        <time title="Modified: 2020-11-12 14:09:12" itemprop="dateModified" datetime="2020-11-12T14:09:12+08:00">2020-11-12</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/iOS/" itemprop="url" rel="index"><span itemprop="name">iOS</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>Tutorial</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2015/07/10/2015-7-10-%E6%8F%90%E9%AB%98iOS%E5%BC%80%E5%8F%91%E6%95%88%E7%8E%87%E7%9A%84%E6%96%B9%E6%B3%95%E5%92%8C%E5%B7%A5%E5%85%B7/">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2015/07/10/2015-7-10-%E6%8F%90%E9%AB%98iOS%E5%BC%80%E5%8F%91%E6%95%88%E7%8E%87%E7%9A%84%E6%96%B9%E6%B3%95%E5%92%8C%E5%B7%A5%E5%85%B7/" data-id="ckmxcocta00081s3dbpsxhs0o" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/iOS/" rel="tag">iOS</a></li></ul>
 
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
     </footer>
-  </div>
-  
-</article>
+  </article>
+</div>
 
 
-  
-    <article id="post-2014-12-25-阅读优秀的Blog" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2014/12/25/2014-12-25-%E9%98%85%E8%AF%BB%E4%BC%98%E7%A7%80%E7%9A%84Blog/" class="article-date">
-  <time datetime="2014-12-25T14:05:00.000Z" itemprop="datePublished">2014-12-25</time>
-</a>
+
+
     
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/iOS/">iOS</a>
-  </div>
 
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
+
+<div class="post-block">
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2014/12/25/2014-12-25-%E9%98%85%E8%AF%BB%E4%BC%98%E7%A7%80%E7%9A%84Blog/">阅读优秀的Blog</a>
-    </h1>
   
 
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2014/12/25/2014-12-25-%E9%98%85%E8%AF%BB%E4%BC%98%E7%A7%80%E7%9A%84Blog/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="yyny1789">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2014/12/25/2014-12-25-%E9%98%85%E8%AF%BB%E4%BC%98%E7%A7%80%E7%9A%84Blog/" class="post-title-link" itemprop="url">阅读优秀的Blog</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2014-12-25 22:05:00" itemprop="dateCreated datePublished" datetime="2014-12-25T22:05:00+08:00">2014-12-25</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/iOS/" itemprop="url" rel="index"><span itemprop="name">iOS</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
       </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><p>Blog不应该是贴代码。</p>
-<p>优秀的Blog应该让人读起来有一种行云流水的感觉。</p>
-<p>优秀的Blog应该会让人有一种相见恨晚的感觉。</p>
-<p>这与作者的知识、逻辑思维是密不可分的。</p>
-<h2 id="Blog"><a href="#Blog" class="headerlink" title="Blog"></a>Blog</h2><ul>
-<li><p><a href="http://objcio.cn/" target="blank"><strong>objc中国</strong></a></p>
-</li>
-<li><p><a href="http://blog.devtang.com/blog/archives/" target="blank"><strong>唐巧的技术博客</strong></a></p>
-</li>
-<li><p><a href="http://www.onevcat.com/" target="blank"><strong>onevcat(喵神)的博客</strong></a></p>
-</li>
-<li><p><a href="http://blog.csdn.net/yiyaaixuexi?viewmode=contents" target="blank"><strong>念茜的CSDN博客(iOS安全知识)</strong></a></p>
-</li>
-<li><p><a href="http://nianxi.net/" target="blank"><strong>念茜的新博客</strong></a></p>
-</li>
-<li><p><a href="http://limboy.me/" target="blank"><strong>花瓣网李忠的博客(ReactiveCocoa知识)</strong></a></p>
-</li>
-<li><p><a href="http://beyondvincent.com/" target="blank"><strong>破船之家(许多优秀翻译)</strong></a></p>
-</li>
-<li><p><a href="http://nshipster.cn/" target="blank"><strong>NSHipster中文版(Mattt大神)</strong></a></p>
-</li>
-<li><p><a href="http://www.jianshu.com/users/b82d2721ba07/latest_articles" target="blank"><strong>叶孤城___的简书(动画迷)</strong></a></p>
-</li>
-<li><p><a href="http://blog.callmewhy.com/" target="blank"><strong>请叫我汪二的博客</strong></a></p>
-</li>
-</ul>
-<ul>
-<li><p><a href="http://zhowkev.in/" target="blank"><strong>Kevin Blog</strong></a></p>
-</li>
-<li><p><a href="http://tech.glowing.com/cn/" target="blank"><strong>Glow 技术团队博客</strong></a></p>
-</li>
-<li><p><a href="http://www.infoq.com/cn/" target="blank"><strong>InfoQ</strong></a></p>
-</li>
-<li><p><a href="http://blog.xcodev.com/blog/archives/" target="blank"><strong>亮了的原创开发技术博客</strong></a></p>
-</li>
-<li><p><a href="http://hufeng825.github.io/" target="blank"><strong>阿峰的技术窝窝</strong></a></p>
-</li>
-<li><p><a href="http://www.iwangke.me/" target="blank"><strong>王轲的技术博客(唱吧、IndieBros Studio创始人)</strong></a></p>
-</li>
-<li><p><a href="http://geeklu.com/" target="blank"><strong>Luke’s Homepage</strong></a></p>
-</li>
-<li><p><a href="http://studentdeng.github.io/" target="blank"><strong>不会开机的男孩</strong></a></p>
-</li>
-<li><p><a href="http://blog.sunnyxx.com/archives/" target="blank"><strong>sunnyxx BLOG</strong></a></p>
-</li>
-<li><p><a href="http://southpeak.github.io/?from=inf&wvr=5&loc=infblog" target="blank"><strong>南峰子的技术博客</strong></a></p>
-</li>
-<li><p><a href="http://casatwy.com/archives.html" target="blank"><strong>casatwy技术博客(iOS应用架构)</strong></a></p>
-</li>
-<li><p><a href="http://iiiyu.com/archives/" target="blank"><strong>萧宸宇 技术博客(Oh My Star)</strong></a></p>
-</li>
-<li><p><a href="http://itony.me/archives" target="blank"><strong>Tony’s blog</strong></a></p>
-</li>
-<li><p><a href="http://c4fun.cn/categories/Algorithm/" target="blank"><strong>LeetCode题解整理版</strong></a></p>
-</li>
-<li><p><a href="http://blog.csdn.net/leixiaohua1020" target="blank"><strong>雷霄骅(leixiaohua1020)的专栏(一个广院工科生的视音频技术笔记)</strong></a></p>
-</li>
-<li><p><a href="http://msching.github.io/blog/archives/" target="blank"><strong>ChengYin’s coding life(iOS音频)</strong></a></p>
-</li>
-<li><p><a href="http://www.ioscreator.com/" target="blank"><strong>ioscreator</strong></a>，<a href="https://github.com/ioscreator" target="blank"><strong>对应github地址</strong></a></p>
-</li>
-<li><p><a href="http://www.jianshu.com/users/256fb15baf75/latest_articles" target="blank"><strong>Sam_Lau的简书</strong></a></p>
-</li>
-<li><p><a href="http://blog.justbilt.com/" target="blank"><strong>justbilt（A game developer）</strong></a></p>
-</li>
-<li><p><a href="http://codingobjc.com/blog/archives/" target="blank"><strong>{while…}coding with objc &amp; swift</strong></a></p>
-</li>
-<li><p><a href="http://adad184.com/" target="blank"><strong>里脊串的开发随笔</strong></a></p>
-</li>
-<li><p><a href="https://github.com/tangqiaoboy/iOSBlogCN" target="blank"><strong>唐巧总结的一些iOS优秀开发者的博客</strong></a></p>
-</li>
-</ul>
 
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>Tutorial</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2014/12/25/2014-12-25-%E9%98%85%E8%AF%BB%E4%BC%98%E7%A7%80%E7%9A%84Blog/">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2014/12/25/2014-12-25-%E9%98%85%E8%AF%BB%E4%BC%98%E7%A7%80%E7%9A%84Blog/" data-id="ckmxcoct400031s3d005k1fee" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/iOS/" rel="tag">iOS</a></li></ul>
 
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
     </footer>
-  </div>
-  
-</article>
+  </article>
+</div>
 
 
-  
-    <article id="post-2014-12-10-寿司之神" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2014/12/10/2014-12-10-%E5%AF%BF%E5%8F%B8%E4%B9%8B%E7%A5%9E/" class="article-date">
-  <time datetime="2014-12-10T14:05:00.000Z" itemprop="datePublished">2014-12-10</time>
-</a>
+
+
     
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/life/">life</a>
-  </div>
 
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
+
+<div class="post-block">
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2014/12/10/2014-12-10-%E5%AF%BF%E5%8F%B8%E4%B9%8B%E7%A5%9E/">寿司之神</a>
-    </h1>
   
 
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2014/12/10/2014-12-10-%E5%AF%BF%E5%8F%B8%E4%B9%8B%E7%A5%9E/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="yyny1789">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2014/12/10/2014-12-10-%E5%AF%BF%E5%8F%B8%E4%B9%8B%E7%A5%9E/" class="post-title-link" itemprop="url">寿司之神</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2014-12-10 22:05:00" itemprop="dateCreated datePublished" datetime="2014-12-10T22:05:00+08:00">2014-12-10</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/life/" itemprop="url" rel="index"><span itemprop="name">life</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
       </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>《寿司之神》是一部值得大家都看的纪录片。</p>
-<h3 id="语录"><a href="#语录" class="headerlink" title="语录"></a>语录</h3><p>1.小野二郎：一旦你决定好职业，你必须全心投入工作之中，你必须爱自己的工作，千万不要有怨言，你必须穷尽一生磨练技能，这就是成功的秘诀，也是让人家敬重的关键。</p>
-<p>2.小野二郎：我一直重复同样的事情以求精进，我总是向往能够有所进步，我会继续向上，努力达到巅峰，但没有人知道巅峰在哪里。</p>
-<p>3.小野二郎：即使到我这年纪，工作了数十年，我仍然不认为自己已臻至善，但我每天依然感到欣喜，我就是爱捏寿司，这就是职人的精神。</p>
-<p>4.鱼店老板：我到了这个年纪还在学新手艺，你一旦认为自己无所不知，就会发现其实只是在欺骗自己，然后会变得很沮丧。</p>
-<p>5.小野二郎：永远听命行事不代表人生会成功。</p>
-<p>6.小野祯一：要一直向前看，超越自己，始终努力，精益求精。这就是他教给我的。</p>
 
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>life</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2014/12/10/2014-12-10-%E5%AF%BF%E5%8F%B8%E4%B9%8B%E7%A5%9E/">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2014/12/10/2014-12-10-%E5%AF%BF%E5%8F%B8%E4%B9%8B%E7%A5%9E/" data-id="ckmxcoct600051s3d4yzsbsqw" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E7%94%9F%E6%B4%BB/" rel="tag">生活</a></li></ul>
 
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
     </footer>
-  </div>
-  
-</article>
+  </article>
+</div>
 
 
-  
-    <article id="post-2014-11-26-帝都生活" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2014/11/26/2014-11-26-%E5%B8%9D%E9%83%BD%E7%94%9F%E6%B4%BB/" class="article-date">
-  <time datetime="2014-11-26T08:15:30.000Z" itemprop="datePublished">2014-11-26</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/life/">life</a>
-  </div>
 
-  </div>
-  <div class="article-inner">
+
     
-    
-      <header class="article-header">
-        
+
+
+<div class="post-block">
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2014/11/26/2014-11-26-%E5%B8%9D%E9%83%BD%E7%94%9F%E6%B4%BB/">帝都生活</a>
-    </h1>
   
 
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2014/11/26/2014-11-26-%E5%B8%9D%E9%83%BD%E7%94%9F%E6%B4%BB/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="yyny1789">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2014/11/26/2014-11-26-%E5%B8%9D%E9%83%BD%E7%94%9F%E6%B4%BB/" class="post-title-link" itemprop="url">帝都生活</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
       
-        <p>一入帝都深似海，不知出路在何处。前有雾霾，后又口腔溃疡，看似光鲜艳丽，实则深处困境，苏三不知在何处，千言万语，道不尽万般帝都生活。</p>
 
+      <time title="Created: 2014-11-26 16:15:30 / Modified: 22:05:00" itemprop="dateCreated datePublished" datetime="2014-11-26T16:15:30+08:00">2014-11-26</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/life/" itemprop="url" rel="index"><span itemprop="name">life</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>life</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2014/11/26/2014-11-26-%E5%B8%9D%E9%83%BD%E7%94%9F%E6%B4%BB/">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2014/11/26/2014-11-26-%E5%B8%9D%E9%83%BD%E7%94%9F%E6%B4%BB/" data-id="ckmxcoct100011s3d6y5kaov3" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E7%94%9F%E6%B4%BB/" rel="tag">生活</a></li></ul>
 
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
     </footer>
-  </div>
-  
-</article>
+  </article>
+</div>
 
 
-  
-    <article id="post-2014-10-28-Hello_world" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2014/10/28/2014-10-28-Hello_world/" class="article-date">
-  <time datetime="2014-10-28T14:05:00.000Z" itemprop="datePublished">2014-10-28</time>
-</a>
+
+
     
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/life/">life</a>
-  </div>
 
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
+
+<div class="post-block">
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2014/10/28/2014-10-28-Hello_world/">Hello World</a>
-    </h1>
   
 
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2014/10/28/2014-10-28-Hello_world/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="yyny1789">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2014/10/28/2014-10-28-Hello_world/" class="post-title-link" itemprop="url">Hello World</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2014-10-28 22:05:00" itemprop="dateCreated datePublished" datetime="2014-10-28T22:05:00+08:00">2014-10-28</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">Edited on</span>
+        <time title="Modified: 2020-11-12 13:50:43" itemprop="dateModified" datetime="2020-11-12T13:50:43+08:00">2020-11-12</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/life/" itemprop="url" rel="index"><span itemprop="name">life</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
       </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>终于决定写博客了，无论好的水的，总算是记录自己的经历吧，如果能帮到别人就更好了。</p>
-<p>第一篇日志就以Hello World开头吧。</p>
-<p>再见，流水年华。</p>
 
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>Introduction</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2014/10/28/2014-10-28-Hello_world/">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2014/10/28/2014-10-28-Hello_world/" data-id="ckmxcocsu00001s3d09otcfhi" class="article-share-link">Share</a>
-      
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
       
     </footer>
-  </div>
+  </article>
+</div>
+
+
+
+
+
   
-</article>
-
-
-  
-
-
-  <nav id="page-nav">
-    
-    <a class="extend prev" rel="prev" href="/">&amp;laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
+  <nav class="pagination">
+    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left" aria-label="Previous page"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
   </nav>
 
-</section>
-        
-          <aside id="sidebar">
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Categories</h3>
-    <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/iOS/">iOS</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/life/">life</a></li></ul>
+
+
+      
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      const activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      const commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
     </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      
+
+      
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">yyny1789</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a>
   </div>
 
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Tags</h3>
-    <div class="widget">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/iOS/" rel="tag">iOS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90/" rel="tag">源码分析</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%94%9F%E6%B4%BB/" rel="tag">生活</a></li></ul>
     </div>
-  </div>
+  </footer>
+
+  
+  <script src="//cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
+<script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/schemes/muse.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
   
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Tag Cloud</h3>
-    <div class="widget tagcloud">
-      <a href="/tags/iOS/" style="font-size: 20px;">iOS</a> <a href="/tags/%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90/" style="font-size: 10px;">源码分析</a> <a href="/tags/%E7%94%9F%E6%B4%BB/" style="font-size: 15px;">生活</a>
-    </div>
-  </div>
 
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Archives</h3>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/11/">November 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/07/">July 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">April 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/">November 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/">September 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">May 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">February 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/08/">August 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/10/">October 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/07/">July 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/12/">December 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/11/">November 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/10/">October 2014</a></li></ul>
-    </div>
-  </div>
+
+
+
+
+
 
 
   
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
-    <div class="widget">
-      <ul>
-        
-          <li>
-            <a href="/2020/11/05/2020-11-11-Kingfisher%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90/">Kingfisher源码分析</a>
-          </li>
-        
-          <li>
-            <a href="/2020/11/03/2020-11-3-App%E5%90%AF%E5%8A%A8%E9%80%9F%E5%BA%A6%E4%BC%98%E5%8C%96%E8%AE%B0%E5%BD%95/">App启动速度优化记录</a>
-          </li>
-        
-          <li>
-            <a href="/2020/07/05/2020-7-5-%E4%BB%8EUIWebView%E5%88%B0WKWebView/">从 UIWebView 到 WKWebView</a>
-          </li>
-        
-          <li>
-            <a href="/2018/04/10/2018-4-9-iOS%20%E6%96%B0%E4%BA%BA%E9%A1%BB%E7%9F%A5/">iOS 新人须知</a>
-          </li>
-        
-          <li>
-            <a href="/2017/11/10/2017-11-10-App%20%E9%80%82%E9%85%8D%20iOS11%20%E5%92%8C%20iPhone%20X/">App 适配 iOS11 和 iPhone X</a>
-          </li>
-        
-      </ul>
-    </div>
-  </div>
 
   
-</aside>
-        
-      </div>
-      <footer id="footer">
-  
-  <div class="outer">
-    <div id="footer-info" class="inner">
-      &copy; 2021 yyny1789<br>
-      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
-    </div>
-  </div>
-</footer>
-    </div>
-    <nav id="mobile-nav">
-  
-    <a href="/" class="mobile-nav-link">Home</a>
-  
-    <a href="/archives" class="mobile-nav-link">Archives</a>
-  
-    <a href="/tags" class="mobile-nav-link">tags</a>
-  
-</nav>
-    
 
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-
-
-  
-<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
-
-  
-<script src="/fancybox/jquery.fancybox.pack.js"></script>
-
-
-
-
-<script src="/js/script.js"></script>
-
-
-
-
-  </div>
 </body>
 </html>
